@@ -1,0 +1,36 @@
+<html ng-app="angTest2">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ang Test2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+
+<body ng-controller="MainController as mc">
+    {{2+2}}
+    <h1>My List Of Imaginary Objects</h1>
+    <ul>
+        <li ng-repeat="scale in scales track by $index">
+            <hr/>Title: {{scale.title}}, rating: {{scale.rate}} - <img height="50" ng-src="{{scale.photo}}" /><a class="badge"
+            ng-click="remove($index)"> x</a></li>
+    </ul>
+    <hr/>
+    <h2 class="panel panel-heading">Add New</h2>
+    <label>Title</label>
+    <input type="text" placeholder="add item" ng-model="nItem" />
+    <label>Rate</label>
+    <input type="text" placeholder="add rate" ng-model="nRate" />
+    <label>Image</label>
+    <input type="text" placeholder="add image" ng-model="nPhoto" />
+    <button ng-click="addItem()">Add</button>
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="maincontroller.js"></script>
+
+    <script src=""></script>
+</body>
+
+</html>
